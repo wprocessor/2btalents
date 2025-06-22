@@ -36,6 +36,11 @@ onloads.observe('contentActivator', new class {
           const itemContent = contents[indexContent];
           itemContent.style.display = "grid";
         }
+        const boths = document.getElementsByClassName("about-description-both");
+        for (let indexBoth = 0, countBoth = boths.length; indexBoth < countBoth; ++indexBoth) {
+          const itemBoth = boths[indexBoth];
+          itemBoth.style.display = "block";
+        }
       }
     }
 
@@ -53,6 +58,12 @@ onloads.observe('contentActivator', new class {
         for (let indexMain = 0, countMain = mains.length; indexMain < countMain; ++indexMain) {
           const itemMain = mains[indexMain];
           itemMain.style.display = "none";
+        }
+
+        const boths = document.getElementsByClassName("about-description-both");
+        for (let indexBoth = 0, countBoth = boths.length; indexBoth < countBoth; ++indexBoth) {
+          const itemBoth = boths[indexBoth];
+          itemBoth.style.display = "none";
         }
       }
     }
