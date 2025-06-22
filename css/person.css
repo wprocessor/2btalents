@@ -1,0 +1,39 @@
+.person-list-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2.666666vw;
+  row-gap: 2.133333vw;
+  @media only screen and (min-width: 1366px) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 16px;
+    row-gap: 24px;
+  }
+}
+.person-list-items.person-list-items--about:before
+{
+  @media only screen and (min-width: 1366px) {
+    content: "";
+  }
+}
+.person-list--title
+{
+  letter-spacing: 1vw;
+  margin: 3vw 0;
+  @media only screen and (min-width: 1366px) {
+    letter-spacing: 4.5px;
+    margin: 14px 0;
+  }
+}
+.person .person-title
+{
+  @media only screen and (min-width: 1366px) {
+    transition: color 0.5s ease-in-out;
+  }
+}
+.person:hover .person-title
+{
+  @media only screen and (min-width: 1366px) {
+    color: #68AB81;
+  }
+}
+

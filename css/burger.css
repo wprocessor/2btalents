@@ -1,0 +1,45 @@
+.burger {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 32 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 17H32' stroke='black' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M0 9H32' stroke='black' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M0 1H32' stroke='black' stroke-width='1.5' stroke-miterlimit='10'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 1rem;
+  height: 4.27vw;
+  width: 8.54vw;
+  @media only screen and (min-width: 1366px) {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 48 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 33H48' stroke='black' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M0 17H48' stroke='black' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M0 1H48' stroke='black' stroke-width='1.5' stroke-miterlimit='10'/%3E%3C/svg%3E");
+    width: 48px;
+    height: 32px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+  }
+}
+.burger:hover {
+  @media only screen and (min-width: 1366px) {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 45 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.4375 31L45 31' stroke='%2368AB81' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M0 16H37.5' stroke='%2368AB81' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M8.4375 1L45 1' stroke='%2368AB81' stroke-width='1.5' stroke-miterlimit='10'/%3E%3C/svg%3E");
+    width: 45px;
+    height: 30px;
+  }
+}
+.burger[data-state="expanded"] {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 19 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 17L18 1' stroke='black' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M18 17L1 1' stroke='black' stroke-width='1.5' stroke-miterlimit='10'/%3E%3C/svg%3E");
+  width: 1.0625rem;
+  margin: 0 0.55rem;
+  margin: 0 2.4vw;
+  height: 4.27vw;
+  width: 4.535vw;
+  @media only screen and (min-width: 1366px) {
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 34 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 31.14L33 1' stroke='black' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M33 31.14L1 1' stroke='black' stroke-width='1.5' stroke-miterlimit='10'/%3E%3C/svg%3E") no-repeat;
+    margin: 0;
+    width: 32px;
+    height: 30px;
+    transition: all 0.5s ease-in-out;
+  }
+}
+.burger[data-state="expanded"]:hover {
+  @media only screen and (min-width: 1366px) {
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 31 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 28L30 1' stroke='%23AB6B68' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M30 28L1 1' stroke='%23AB6B68' stroke-width='1.5' stroke-miterlimit='10'/%3E%3C/svg%3E") no-repeat;
+    width: 29px;
+    height: 27px;
+  }
+}
+
