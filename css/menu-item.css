@@ -1,0 +1,18 @@
+.menu-item
+{
+  text-transform: uppercase;
+}
+.menu-item,
+.menu-item a
+{
+  color: #000;
+  cursor: pointer;
+  margin: 0.25rem 0;
+  padding: 0.532rem 0;
+  transition: all 0.5s ease-in-out;
+}
+.menu-item:hover,
+.menu-item:hover a
+{
+  color: #68AB81;
+}
