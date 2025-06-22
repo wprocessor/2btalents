@@ -24,6 +24,41 @@ class Onloads extends Observer {
 
 const onloads = new Onloads();
 
+onloads.observe('contentActivator', new class {
+  push() {
+    const closes = document.getElementsByClassName("content-close-button");
+    for (let indexCloses = 0, countCloses = closes.length; indexCloses < countCloses; ++indexCloses) {
+      const itemClose = closes[indexCloses];
+      itemClose.onclick = function (e) {
+        e.target.closest('.content-about').style.display = 'none';
+        const contents = document.getElementsByClassName('person-list-items--about');
+        for (let indexContent = 0, countContent = contents.length; indexContent < countContent; ++indexContent) {
+          const itemContent = contents[indexContent];
+          itemContent.style.display = "grid";
+        }
+      }
+    }
+
+    const elms = document.getElementsByClassName("content-activator");
+    for (let index = 0, count = elms.length; index < count; ++index) {
+      const item = elms[index];
+      item.onclick = function (e) {
+        const contents = document.getElementsByClassName(e.target.dataset.targetClass);
+        for (let indexContent = 0, countContent = contents.length; indexContent < countContent; ++indexContent) {
+          const itemContent = contents[indexContent];
+          itemContent.style.display = "block";
+        }
+
+        const mains = document.getElementsByClassName(e.target.dataset.mainClass);
+        for (let indexMain = 0, countMain = mains.length; indexMain < countMain; ++indexMain) {
+          const itemMain = mains[indexMain];
+          itemMain.style.display = "none";
+        }
+      }
+    }
+  }
+});
+
 onloads.observe('burger', new class {
   parentsUpdateClass(parents, cssCLass, collapse) {
     for (let pindex = 0, pcount = parents.length; pindex < pcount; ++pindex)

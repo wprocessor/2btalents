@@ -204,24 +204,42 @@
 }
 
 .backbtn {
-  background-image: url("data:image/svg+xml,%3Csvg width='42' height='17' viewBox='0 0 42 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.13989 8H41.1399' stroke='black' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M1 8.14L8.14 1' stroke='black' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M1 7.85999L9.14 16' stroke='black' stroke-width='1.5' stroke-miterlimit='10'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 42 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.13989 8H41.1399' stroke='black' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M1 8.14L8.14 1' stroke='black' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M1 7.85999L9.14 16' stroke='black' stroke-width='1.5' stroke-miterlimit='10'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  width: 8.535vw;
-  height: 8.535vw;
+  width: 11.0825vw;
+  height: 4.1565vw;
   transition: all 0.5s ease-in-out;
   @media only screen and (min-width: 1366px) {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 15px;
   }
 }
 
 .backbtn:hover {
-  background-image: url("data:image/svg+xml,%3Csvg width='39' height='17' viewBox='0 0 39 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.12939 8H38.14' stroke='%2368AB81' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M1 8.14L7.60639 1' stroke='%2368AB81' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M1 7.85999L8.53165 16' stroke='%2368AB81' stroke-width='1.5' stroke-miterlimit='10'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 39 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.12939 8H38.14' stroke='%2368AB81' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M1 8.14L7.60639 1' stroke='%2368AB81' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M1 7.85999L8.53165 16' stroke='%2368AB81' stroke-width='1.5' stroke-miterlimit='10'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.3125rem;
+  height: 0.9375rem;
+  @media only screen and (min-width: 1366px) {
+    width: 37px;
+    height: 15px;
+  }
 }
+
 a.backbtn-link {
   display: inline-block;
   text-decoration: none;
+}
+
+.content-close-button {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 19 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 17L18 1' stroke='black' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M18 17L1 1' stroke='black' stroke-width='1.5' stroke-miterlimit='10'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  width: 4.535vw;
+  height: 4.27vw;
+  margin-bottom: 5vw;
+}
+.content-close-button:hover {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 14L15 1' stroke='%23AB6B68' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M15 14L1 1' stroke='%23AB6B68' stroke-width='1.5' stroke-miterlimit='10'/%3E%3C/svg%3E");
+  width: 3.735vw;
+  height: 3.47vw;
 }
