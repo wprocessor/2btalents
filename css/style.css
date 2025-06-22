@@ -175,11 +175,32 @@
   @media only screen and (min-width: 1366px) {
     margin-bottom: 0;
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-row-gap: 16px;
+    order: 2;
   }
 }
 .about-description-both
 {
   margin: 4.2666vw 0;
+  @media only screen and (min-width: 1366px) {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+.person
+{
+  @media only screen and (min-width: 1366px) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-column-gap: 16px;
+  }
+}
+.person-wrapper
+{
+  @media only screen and (min-width: 1366px) {
+    order: 1;
+  }
 }
 .person-about
 {
@@ -201,6 +222,10 @@
 .content.content-about
 {
   display: none;
+  @media only screen and (min-width: 1366px) {
+    max-width: 50%;
+    margin: 0 auto;
+  }
 }
 
 .backbtn {
@@ -237,9 +262,18 @@ a.backbtn-link {
   width: 4.535vw;
   height: 4.27vw;
   margin-bottom: 5vw;
+  @media only screen and (min-width: 1366px) {
+    width: 17px;
+    height: 16px;
+    margin-bottom: 16px;
+  }
 }
 .content-close-button:hover {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 14L15 1' stroke='%23AB6B68' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M15 14L1 1' stroke='%23AB6B68' stroke-width='1.5' stroke-miterlimit='10'/%3E%3C/svg%3E");
   width: 3.735vw;
   height: 3.47vw;
+  @media only screen and (min-width: 1366px) {
+    width: 14px;
+    height: 13px;
+  }
 }
