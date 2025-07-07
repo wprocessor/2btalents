@@ -110,34 +110,6 @@ onloads.observe('swiper', new class {
     const swiper = new Swiper('.swiper', {
       direction: 'horizontal',
       centeredSlides: true,
-      initialSlide: 1,
-      slidesPerView: 4,
-      //slidesOffsetBefore: 180,
-      spaceBetween: 20,
-      loop: true,
-      breakpoints: {
-          1366: {
-              slidesPerView:4,
-              spaceBetween: 20,
-          },
-          750: {
-              slidesPerView:4,
-              spaceBetween: 20,
-          },
-          0: {
-              slidesPerView:2,
-              spaceBetween: 20,
-          }
-      }
-    });
-  }
-});
-onloads.observe('swiper2', new class {
-  push() {
-    const swiper = new Swiper('.swiper2', {
-      direction: 'horizontal',
-      centeredSlides: true,
-      initialSlide: 1,
       slidesPerView: 4,
       slidesOffsetBefore: 180,
       spaceBetween: 20,
@@ -159,4 +131,5 @@ onloads.observe('swiper2', new class {
     });
   }
 });
+
 
