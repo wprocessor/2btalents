@@ -141,6 +141,10 @@ const swiperZoomData = {
   centeredSlides: true,
   slidesPerView: 1,
   loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 };
 
 class Clicker {
@@ -182,7 +186,6 @@ onloads.observe('swiper', new class {
     const bodyContent = document.querySelector('body');
 
     zoomStop.forEach(i => i.addEventListener('click', (e) => {
-      console.log('close request');
       zoomSwiper.disable();
       zoomContent.classList.toggle(zoomHideClass);
       i.classList.toggle(zoomHideClass);
@@ -204,12 +207,18 @@ onloads.observe('swiper', new class {
         bodyContent.style.backgroundColor = "#222";
         zoomContent.appendChild(document.querySelector('.page-content .swiper').cloneNode(true));
 
+        if (contentSwiper.clickedIndex > 0) {
+          swiperZoomData.initialSlide = contentSwiper.clickedIndex;
+        }
+
         zoomSwiper = new Swiper('.zoom-content .swiper', swiperZoomData);
         zoomSwiper.on('click', (swiper, e) => {
-          if (!e.target.classList.contains('zoom-stop-icon')) {
+          console.log(e);
+          if (!e.target.classList.contains('zoom-stop-icon')
+          && !e.target.classList.contains('swiper-slide-active')) {
             return;
           }
-          console.log(e);
+
           zoomSwiper.disable();
           zoomContent.classList.toggle(zoomHideClass);
           zoomStop.forEach(i=>i.classList.toggle(zoomHideClass));
