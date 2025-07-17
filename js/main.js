@@ -1,5 +1,19 @@
 "use strict";
 
+Object.prototype.replaceOptions = function (options)
+{
+  if (this instanceof Object) {
+    Object.keys(this).forEach((key) => Object.hasOwn(options, key) ? this[key] = options[key] : this[key] = this[key]);
+  }
+}
+
+Element.prototype.removeAllChilds = function()
+{
+  while(this.firstChild) {
+    this.removeChild(this.firstChild);
+  }
+}
+
 class Observer {
   observer = {};
   observe(name, ref) {
@@ -7,7 +21,9 @@ class Observer {
   }
   push() {
     for (let key in this.observer) {
-      this.observer[key].push();
+      if (this.observer[key].push instanceof Function) {
+        this.observer[key].push();
+      }
     }
   }
 };
@@ -105,31 +121,113 @@ onloads.observe('burger', new class {
   }
 });
 
+const swiperData = {
+  direction: 'horizontal',
+  wrapperClass: 'swiper-wrapper',
+  centeredSlides: false,
+  slidesPerView: 4,
+  slidesOffsetBefore:-180,
+  spaceBetween: 20,
+  loop: true,
+  breakpoints: {
+  1366: {slidesPerView:4,spaceBetween: 20},
+  750: {slidesPerView:4,spaceBetween: 20},
+  0: {slidesPerView:2, spaceBetween: 20}
+  }
+};
+const swiperZoomData = {
+  direction: 'horizontal',
+  wrapperClass: 'swiper-wrapper',
+  centeredSlides: true,
+  slidesPerView: 1,
+  loop: true,
+};
+
+class Clicker {
+  #items = [];
+  #events = {
+    click: [],
+  };
+  constructor(query, options) {
+    this.#items = document.querySelectorAll(query);
+
+    this.#items.forEach((i) => {
+      i.zoomer = this;
+      i.addEventListener('click', this.clickEvent);
+    });
+  }
+  clickEvent(e) {
+    e.currentTarget.zoomer.doClick(e);
+  }
+  doClick(e) {
+    this.#events['click'].forEach(i => i(e));
+  }
+  on(eventName, callback) {
+    this.#events['click'].push(callback);
+  }
+}
+
+let contentSwiper = undefined;
+let zoomSwiper = undefined;
+const zoomHideClass = 'zoom-hide';
+
 onloads.observe('swiper', new class {
   push() {
-    const swiper = new Swiper('.swiper', {
-      direction: 'horizontal',
-      centeredSlides: true,
-      slidesPerView: 4,
-      slidesOffsetBefore: 180,
-      spaceBetween: 20,
-      loop: true,
-      breakpoints: {
-          1366: {
-              slidesPerView:4,
-              spaceBetween: 20,
-          },
-          750: {
-              slidesPerView:4,
-              spaceBetween: 20,
-          },
-          0: {
-              slidesPerView:2,
-              spaceBetween: 20,
+    contentSwiper = new Swiper('.page-content .swiper', swiperData);
+
+    const zoommer = new Clicker('.swiper-slide');
+    const zoomStop = document.querySelectorAll('.zoom-stop-icon');
+    const zoomContent = document.querySelector('.zoom-content');
+    const pageContent = document.querySelector('.page-content');
+    const bodyContent = document.querySelector('body');
+
+    zoomStop.forEach(i => i.addEventListener('click', (e) => {
+      console.log('close request');
+      zoomSwiper.disable();
+      zoomContent.classList.toggle(zoomHideClass);
+      i.classList.toggle(zoomHideClass);
+      pageContent.classList.toggle(zoomHideClass);
+      bodyContent.style.overflow = "visible";
+      bodyContent.style.backgroundColor = "transparent";
+      contentSwiper.enable();
+      zoomContent.removeAllChilds();
+    }));
+
+    zoommer.on('click', (e) => {
+      zoomContent.classList.toggle(zoomHideClass);
+      zoomStop.forEach(i=>i.classList.toggle(zoomHideClass));
+      const active = pageContent.classList.toggle(zoomHideClass);
+
+      if (active) {
+        contentSwiper.disable();
+        bodyContent.style.overflow = "hidden";
+        bodyContent.style.backgroundColor = "#222";
+        zoomContent.appendChild(document.querySelector('.page-content .swiper').cloneNode(true));
+
+        zoomSwiper = new Swiper('.zoom-content .swiper', swiperZoomData);
+        zoomSwiper.on('click', (swiper, e) => {
+          if (!e.target.classList.contains('zoom-stop-icon')) {
+            return;
           }
+          console.log(e);
+          zoomSwiper.disable();
+          zoomContent.classList.toggle(zoomHideClass);
+          zoomStop.forEach(i=>i.classList.toggle(zoomHideClass));
+          pageContent.classList.toggle(zoomHideClass);
+          bodyContent.style.overflow = "visible";
+          bodyContent.style.backgroundColor = "transparent";
+          contentSwiper.enable();
+          zoomContent.removeAllChilds();
+        });
+      } else {
+        zoomSwiper.disable();
+        zoomContent.classList.toggle(zoomHideClass);
+        zoomStop.forEach(i=>i.classList.toggle(zoomHideClass));
+        pageContent.classList.toggle(zoomHideClass);
+        bodyContent.style.overflow = "visible";
+        bodyContent.style.backgroundColor = "transparent";
+        contentSwiper.enable();
       }
     });
   }
 });
-
-

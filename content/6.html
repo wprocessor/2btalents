@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang=ru>
   <head>
-    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2BTalents</title>
@@ -25,6 +25,8 @@
     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   </head>
   <body>
+    <div class="zoom-content zoom-hide"></div>
+    <div class="zoom-stop zoom-hide"></div>
     <div class="page-content">
       <div class="header">
         <header>
@@ -56,17 +58,53 @@
       </div>
       <div class="content">
         <div class="content-spacing person"></div>
-	<div class="person-details--gallery">
-	  <div class="swiper">
-	    <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="/img/img6.1.jpg" /></div>
-              <div class="swiper-slide"><img src="/img/img6.2.jpg" /></div>
-              <!--<div class="swiper-slide"><img src="/img/img6.1.jpg" /></div>
-              <div class="swiper-slide"><img src="/img/img6.2.jpg" /></div>
-              <div class="swiper-slide"><img src="/img/img6.1.jpg" /></div>
-              <div class="swiper-slide"><img src="/img/img6.2.jpg" /></div>-->
-	    </div>
-	  </div>
+        <div class="person-details--gallery">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="zoom-stop">
+                  <div class="zoom-stop-icon zoom-hide"></div>
+                </div>
+                <img src="/img/img6.1.jpg" />
+                <div class="zoom-start"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="zoom-stop">
+                  <div class="zoom-stop-icon zoom-hide"></div>
+                </div>
+                <img src="/img/img6.2.jpg" />
+                <div class="zoom-start"></div>
+              </div>
+              <!--<div class="swiper-slide">
+                <div class="zoom-stop">
+                  <div class="zoom-stop-icon zoom-hide"></div>
+                </div>
+                <img src="/img/img5.3.jpg" />
+                <div class="zoom-start"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="zoom-stop">
+                  <div class="zoom-stop-icon zoom-hide"></div>
+                </div>
+                <img src="/img/img5.4.jpg" />
+                <div class="zoom-start"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="zoom-stop">
+                  <div class="zoom-stop-icon zoom-hide"></div>
+                </div>
+                <img src="/img/img5.5.jpg" />
+                <div class="zoom-start"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="zoom-stop">
+                  <div class="zoom-stop-icon zoom-hide"></div>
+                </div>
+                <img src="/img/img5.6.jpg" />
+                <div class="zoom-start"></div>
+              </div>-->
+            </div>
+          </div>
 	</div>
         <div class="person-details">
           <div class="person-details--left">
