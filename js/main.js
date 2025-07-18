@@ -145,6 +145,9 @@ const swiperZoomData = {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  keyboard: {
+    enabled: true,
+  },
 };
 
 class Clicker {
