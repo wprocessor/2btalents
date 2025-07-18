@@ -297,8 +297,7 @@ a.backbtn-link {
 
 .zoom-content .swiper-slide img {
   max-height: 100%;
-#  height: 100vh;
-#  padding: 1vw 0;
+  align-self: center;
 }
 
 .swiper-slide .zoom-start {
