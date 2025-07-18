@@ -368,6 +368,11 @@ a.backbtn-link {
   }
 }
 
+.zoom-content .swiper-ios .swiper-slide .zoom-stop-icon {
+  top: calc(50vh - 85vw);
+  margin-top: inherit;
+}
+
 .page-content .swiper-button-next,
 .page-content .swiper-button-prev {
   display: none;
