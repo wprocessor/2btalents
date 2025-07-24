@@ -360,17 +360,17 @@ a.backbtn-link {
   }
 }
 
+.zoom-content .swiper-ios .swiper-slide .zoom-stop-icon {
+  top: calc(50vh - 70vw);
+  margin-top: inherit;
+}
+
 .zoom-content .swiper-slide .zoom-stop-icon:hover {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 14L15 1' stroke='white' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M15 14L1 1' stroke='white' stroke-width='1.5' stroke-miterlimit='10'/%3E%3C/svg%3E");
   @media only screen and (min-width: 1366px) {
     width: 14px;
     height: 13px;
   }
-}
-
-.zoom-content .swiper-ios .swiper-slide .zoom-stop-icon {
-  top: calc(50vh - 85vw);
-  margin-top: inherit;
 }
 
 .page-content .swiper-button-next,
@@ -387,6 +387,11 @@ a.backbtn-link {
   content: "";
   width: 41px;
   height: 15px;
+}
+
+.zoom-content .swiper-ios .swiper-button-prev,
+.zoom-content .swiper-ios .swiper-button-next {
+  display: none;
 }
 
 :root {
