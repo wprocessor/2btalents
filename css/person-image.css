@@ -1,0 +1,21 @@
+.person-image {
+  @media only screen and (min-width: 1366px) {
+    overflow: hidden;
+  }
+}
+.person-image img
+{
+  width: 100%;
+  @media only screen and (min-width: 1366px) {
+    transition: transform 0.5s cubic-bezier(0.3, 0, 0.7, 1);
+    transform-origin: top;
+  }
+}
+.person-image:hover img
+{
+  @media only screen and (min-width: 1366px) {
+    transition: transform 0.5s cubic-bezier(1, 0.7, 0, 0.3);
+    transform: scale(1.15);
+  }
+}
+
