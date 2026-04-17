@@ -1,4 +1,4 @@
-docker/
 db/
 .env
 vendor/
+docker/mysql/data/
