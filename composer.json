@@ -19,7 +19,8 @@
     "wordpress-plugin/post-types-order": "^2.3",
     "wordpress-plugin/smart-custom-fields": "^5.0",
     "koodimonni/composer-dropin-installer": "^1.4",
-    "koodimonni-language/core-ru_ru": "^6.9"
+    "koodimonni-language/core-ru_ru": "^6.9",
+    "johnpbloch/wordpress-core-installer": "^2.0"
   },
   "extra": {
     "wordpress-install-dir": "src",
