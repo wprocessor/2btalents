@@ -1,0 +1,32 @@
+.kinopoisk {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 38 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.32 0.03V10.69H7.88L15.2 0.03H25.33L11.81 12.36L12.37 12.92L37.17 0.01V8.98L15.19 16.83V17.39L37.17 15.43V23.85L15.19 21.89V22.45L37.17 30.3V39.28L12.38 26.37L11.82 26.93L25.34 39.26H15.21L7.89 28.6H7.33V39.26H0V0H7.32V0.03Z' fill='black'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  width: 8.27vw;
+  height: 8.535vw;
+  transition: all 0.5s ease-in-out;
+  @media only screen and (min-width: 1366px) {
+    width: 37px;
+    height: 39px;
+  }
+}
+
+.kinopoisk:hover {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 36 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.92613 0.0283858V10.1148H7.456L14.3821 0.0283858H23.9671L11.1745 11.6949L11.7044 12.2248L35.17 0.00946193V8.49681L14.3727 15.9244V16.4543L35.17 14.5998V22.5667L14.3727 20.7122V21.242L35.17 28.6697V37.1665L11.7139 24.9511L11.184 25.481L23.9765 37.1475H14.3916L7.46546 27.0611H6.9356V37.1475H0V0H6.92613V0.0283858Z' fill='%23EC622A'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  width: 2.1875rem;
+  height: 2.3125rem;
+}
+
+.kinopoisk-svg {
+  background: url(./index.svg) no-repeat;
+  width: 2.3125rem;
+  height: 2.4375rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.kinopoisk-svg:hover {
+  background: url(./index-hover.svg) no-repeat;
+  width: 2.1875rem;
+  height: 2.3125rem;
+}
+

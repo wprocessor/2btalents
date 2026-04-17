@@ -1,0 +1,108 @@
+{
+  "name": "vk/2btal",
+  "type": "project",
+  "license": "free",
+  "autoload": {
+    "psr-4": {
+      "Vk\\2btal\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "vk"
+    }
+  ],
+  "require": {
+    "wordpress/wordpress": "^6.2.2",
+    "composer/installers": "*",
+    "wordpress-plugin/advanced-custom-fields": "^6.4",
+    "wordpress-plugin/post-types-order": "^2.3",
+    "wordpress-plugin/smart-custom-fields": "^5.0",
+    "koodimonni/composer-dropin-installer": "^1.4",
+    "koodimonni-language/core-ru_ru": "^6.9"
+  },
+  "extra": {
+    "wordpress-install-dir": "src",
+    "installer-paths": {
+        "src/wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
+    },
+    "dropin-paths": {
+      "src/wp-content/languages/": ["type:wordpress-language"],
+      "src/wp-content/languages/plugins/": ["type:wordpress-plugin-language"],
+      "src/wp-content/languages/themes/": ["type:wordpress-theme-language"]
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "johnpbloch/wordpress-core-installer": true,
+      "composer/installers": true,
+      "koodimonni/composer-dropin-installer": true
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "rm -rf src/xmlrpc.php"
+    ],
+    "post-update-cmd": [
+    ]
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wp-languages.github.io",
+      "only": [
+        "koodimonni-language/*",
+        "koodimonni-plugin-language/*",
+        "koodimonni-theme-language/*"
+      ]
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wordpress/wordpress",
+        "version": "6.2.2",
+        "type": "wordpress-core",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/WordPress/WordPress/archive/refs/tags/6.2.2.zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wordpress-plugin/advanced-custom-fields",
+        "version": "6.4.3",
+        "type": "wordpress-plugin",
+        "dist": {
+          "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.6.4.3.zip",
+          "type": "zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wordpress-plugin/post-types-order",
+        "version": "2.3.7",
+        "type": "wordpress-plugin",
+        "dist": {
+          "url": "https://downloads.wordpress.org/plugin/post-types-order.2.3.7.zip",
+          "type": "zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wordpress-plugin/smart-custom-fields",
+        "version": "5.0.4",
+        "type": "wordpress-plugin",
+        "dist": {
+          "url": "https://downloads.wordpress.org/plugin/smart-custom-fields.5.0.4.zip",
+          "type": "zip"
+        }
+      }
+    }
+  ]
+}

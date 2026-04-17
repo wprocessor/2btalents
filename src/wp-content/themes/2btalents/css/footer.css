@@ -1,0 +1,70 @@
+.footer .footer-menu-contacts,
+.menu-icons .footer-menu-contacts
+{
+  display: grid;
+  grid-template-columns: 2fr auto auto 1fr;
+  column-gap: 4vw;
+  align-items: center;
+  @media only screen and (min-width: 1366px) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+  }
+}
+.footer .footer-menu-contacts > div
+{
+  @media only screen and (min-width: 1366px) {
+    display: inline-block;
+  }
+}
+.footer .footer-menu-contacts:before,
+.footer .footer-menu-contacts:after,
+.menu-icons .footer-menu-contacts:before,
+.menu-icons .footer-menu-contacts:after
+{
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #000;
+  @media only screen and (min-width: 1366px) {
+    content: none;
+  }
+}
+
+.footer .footer-menu
+{
+  display: none;
+  @media only screen and (min-width: 1366px) {
+    display: block;
+  }
+}
+.footer
+{
+  margin: 9.6vw 0;
+  @media only screen and (min-width: 1366px) {
+    margin: 60px 0;
+  }
+}
+.footer footer
+{
+  @media only screen and (min-width: 1366px) {
+    display: grid;
+    grid-template-columns: auto fit-content(600px);
+    gap: 128px;
+  }
+}
+.footer .footer-left
+{
+  @media only screen and (min-width: 1366px) {
+    height: 1px;
+    background-color: #000;
+    margin: auto 0;
+  }
+}
+.footer .footer-right
+{
+  @media only screen and (min-width: 1366px) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 144px;
+  }
+}
