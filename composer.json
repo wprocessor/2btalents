@@ -20,12 +20,14 @@
     "wordpress-plugin/smart-custom-fields": "^5.0",
     "koodimonni/composer-dropin-installer": "^1.4",
     "koodimonni-language/core-ru_ru": "^6.9",
-    "johnpbloch/wordpress-core-installer": "^2.0"
+    "johnpbloch/wordpress-core-installer": "^2.0",
+    "wordpress-theme/astra": "^4.13.1"
   },
   "extra": {
     "wordpress-install-dir": "src",
     "installer-paths": {
-        "src/wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
+        "src/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+	"src/wp-content/themes/{$name}/": ["type:wordpress-theme"]
     },
     "dropin-paths": {
       "src/wp-content/languages/": ["type:wordpress-language"],
@@ -104,6 +106,18 @@
           "type": "zip"
         }
       }
+    },
+    {
+	    "type": "package",
+	    "package": {
+		    "name": "wordpress-theme/astra",
+		    "version": "4.13.1",
+		    "type": "wordpress-theme",
+		    "dist": {
+			    "url": "https://downloads.wordpress.org/theme/astra.4.13.1.zip",
+			    "type": "zip"
+		    }
+	    }
     }
   ]
 }

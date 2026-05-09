@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cf5afe58a89addf49238bb1b77ef2797",
+    "content-hash": "fa2e24b2f579f380cf7c082f5338d80a",
     "packages": [
         {
             "name": "composer/installers",
@@ -299,6 +299,15 @@
                 "url": "https://downloads.wordpress.org/plugin/smart-custom-fields.5.0.4.zip"
             },
             "type": "wordpress-plugin"
+        },
+        {
+            "name": "wordpress-theme/astra",
+            "version": "4.13.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/theme/astra.4.13.1.zip"
+            },
+            "type": "wordpress-theme"
         },
         {
             "name": "wordpress/wordpress",

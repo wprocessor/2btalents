@@ -19,7 +19,7 @@ wp-content/plugins/advanced-custom-fields/*
 wp-content/plugins/post-types-order/*
 wp-content/plugins/smart-custom-fields/*
 !wp-content/themes/2btalents/
-!wp-content/themes/astra/
+wp-content/themes/astra/
 !wp-content/plugins/about-items/
 !wp-content/plugins/actor-item/
 !wp-content/plugins/actors-front/
