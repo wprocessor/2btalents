@@ -18,6 +18,8 @@
  * @package WordPress
  */
 
+require_once __DIR__ . "/../env.php";
+
 function get_env_default(string $name, bool $local_only = false, mixed $default = null): mixed {
   if ($nameValue = getenv($name)) {
     return $nameValue;
